@@ -2,7 +2,7 @@
 #include <cstring>
 using namespace std;
 
-//����phone��
+//设置phone类
 class phone {
 private:
     char number[12];
@@ -69,9 +69,9 @@ void phone::insertcard(const char numberin[], const char cityin[])
 }
 void display(phone& t)
 {
-    cout << "�ֻ����룺" << t.getno()
-        << "�������أ�" << t.getcity()
-        << "��������" << t.getfee()
+    cout << "手机号码：" << t.getno()
+        << "；归属地：" << t.getcity()
+        << "；话费余额：" << t.getfee()
         << endl;
 }
 
@@ -88,11 +88,11 @@ int main()
     talk = p1.call(p2, m);
     const char* line = "*-------------------------------------------------*";
     cout << line << endl;
-    cout << "p1����p2......." << endl;
+    cout << "p1主叫p2......." << endl;
     if (talk == m)
-        cout << "ͨ��ʱ��" << talk << "���ӡ�ͨ������,ף�����" << endl;
+        cout << "ͨ通话时长" << talk << "分钟。通话结束,祝您愉快" << endl;
     else
-        cout << "ͨ��ʱ��" << talk << "���ӡ�����,�뾡��Ԥ�滰��" << endl;
+        cout << "ͨ通话时长" << talk << "分钟。余额不足,请尽快预存话费" << endl;
     display(p1);
     display(p2);
     cout << line << endl;
@@ -100,13 +100,13 @@ int main()
     m = 40;
     talk = p3.call(p1, 40);
     cout << line << endl;
-    cout << "p3����p1......." << endl;
+    cout << "p3主叫p1......." << endl;
     if (talk == m)
-        cout << "ͨ��ʱ��" << talk << "���ӡ�ͨ������,ף�����........" << endl;
+        cout << "ͨ通话时长" << talk << "分钟。通话结束,祝您愉快........" << endl;
 
     else
 
-        cout << "ͨ��ʱ��" << talk << "���ӡ��绰����.......�뾡��Ԥ�滰��." << endl;;
+        cout << "ͨ通话时长" << talk << "分钟。电话余额不足.......请尽快预存话费." << endl;;
 
     display(p3); display(p1);
 
